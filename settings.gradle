@@ -1,0 +1,3 @@
+rootProject.name = 'DiplomaThesisServer'
+enableFeaturePreview('IMPROVED_POM_SUPPORT')
+
