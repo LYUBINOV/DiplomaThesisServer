@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "/verification")
 public class VerificationController {
-    private VerificationCommandHandler verificationCommandHandler;
+    private VerificationCommandHandler verificationCommandHandler = new VerificationCommandHandler();
 
     /** SHOW OBJ TO STRING
      * ---------------------------------------------------
@@ -19,16 +19,6 @@ public class VerificationController {
      * String jsonString = mapper.writeValueAsString(tmp);
      * ---------------------------------------------------
      */
-
-//    @GetMapping("/getEXAMPLE")
-//    public String getEXAMPLE() {
-//        return null;
-//    }
-//
-//    @PutMapping(value = "/putEXAMPLE/{tmp}", consumes={MediaType.ALL_VALUE})
-//    public void putEXAMPLE(@PathVariable String tmp) {
-//
-//    }
 
     @PostMapping(value = "/check", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public String checkSign(@RequestBody VerificationDto verificationDto) {
