@@ -7,6 +7,7 @@ import org.bouncycastle.pqc.crypto.sphincs.SPHINCS256Signer;
 import org.bouncycastle.pqc.crypto.sphincs.SPHINCSPublicKeyParameters;
 import org.bouncycastle.util.encoders.Base64;
 
+@Component
 public class VerificationCommandHandler {
     public String checkSign(VerificationDto verificationDto) {
         SPHINCSPublicKeyParameters publicKey = new SPHINCSPublicKeyParameters(Base64.decode(verificationDto.getPublicKey()));
