@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/verification")
 public class VerificationController {
 //     private VerificationCommandHandler verificationCommandHandler = new VerificationCommandHandler();
-    @Component private VerificationCommandHandler verificationCommandHandler;
+    @@Resource private VerificationCommandHandler verificationCommandHandler;
     /** SHOW OBJ TO STRING
      * ---------------------------------------------------
      * ObjectMapper mapper = new ObjectMapper();
