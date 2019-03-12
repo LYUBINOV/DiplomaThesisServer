@@ -5,11 +5,14 @@ import Application.DataTransferObjects.VerificationDto;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 @RestController
 @RequestMapping(path = "/verification")
 public class VerificationController {
 //     private VerificationCommandHandler verificationCommandHandler = new VerificationCommandHandler();
-    @@Resource private VerificationCommandHandler verificationCommandHandler;
+    @Resource
+    private VerificationCommandHandler verificationCommandHandler;
     /** SHOW OBJ TO STRING
      * ---------------------------------------------------
      * ObjectMapper mapper = new ObjectMapper();

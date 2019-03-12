@@ -6,6 +6,7 @@ import org.bouncycastle.pqc.crypto.MessageSigner;
 import org.bouncycastle.pqc.crypto.sphincs.SPHINCS256Signer;
 import org.bouncycastle.pqc.crypto.sphincs.SPHINCSPublicKeyParameters;
 import org.bouncycastle.util.encoders.Base64;
+import org.springframework.stereotype.Component;
 
 @Component
 public class VerificationCommandHandler {
