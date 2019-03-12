@@ -3,10 +3,7 @@ package Application.Controllers;
 import Application.CommandHandlers.VerificationCommandHandler;
 import Application.DataTransferObjects.VerificationDto;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/verification")
@@ -19,6 +16,11 @@ public class VerificationController {
      * String jsonString = mapper.writeValueAsString(tmp);
      * ---------------------------------------------------
      */
+
+    @GetMapping(value = "/test")
+    public String testGet() {
+        return "HelloWorld";
+    }
 
     @PostMapping(value = "/check", consumes = {MediaType.APPLICATION_JSON_VALUE})
     public String checkSign(@RequestBody VerificationDto verificationDto) {

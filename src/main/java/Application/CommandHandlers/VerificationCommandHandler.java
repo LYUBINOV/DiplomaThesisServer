@@ -19,12 +19,12 @@ public class VerificationCommandHandler {
 
         if (!isValidSignature) {
             try {
-                throw new Exception("Podpis nieje validny!");
+                throw new Exception("SignInvalid");
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
-        return "Podpis je validny!";
+        return "SignValid!";
     }
 }
