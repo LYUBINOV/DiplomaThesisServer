@@ -18,6 +18,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE'
 
     implementation files('libs/bcprov-jdk15on-159.jar') //Post-Quantum cryptography
+    implementation files('libs/mysql-connector-java-5.1.41-bin.jar') //DB connect
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
     
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
